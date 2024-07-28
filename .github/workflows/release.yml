@@ -49,6 +49,6 @@ jobs:
       - name: Upload installers
         working-directory: ./setup
         env:
-          S3_ACCESS_KEY: ${{ secrets.S3_ACCESS_KEY }}
-          S3_SECRET_KEY: ${{ secrets.S3_SECRET_KEY }}
+          S3_ACCESS_KEY: 6EWMBFDV6Y8NZZ9NUH2P
+          S3_SECRET_KEY: TL76iMIZlbfnffsTB6of582P92YGFCfTbSzEG4TM
         run: s3cmd --acl-public put traccar-*.zip s3://traccar/builds/ --host=obs.ap-southeast-1.myhuaweicloud.com --host-bucket=pet2 --access_key="$S3_ACCESS_KEY" --secret_key="$S3_SECRET_KEY"
